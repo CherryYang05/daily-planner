@@ -1,8 +1,9 @@
 import { createServer } from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
-import { resolve, extname, sep } from 'node:path';
+import { resolve, dirname, extname, sep } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const root = resolve(import.meta.dirname);
+const root = dirname(fileURLToPath(import.meta.url));
 const port = Number(process.env.PORT || 4173);
 const contentTypes = {
   '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
