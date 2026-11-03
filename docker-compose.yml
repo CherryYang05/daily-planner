@@ -1,0 +1,6 @@
+services:
+  daily-planner:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "${HOST_PORT:-8080}:80"

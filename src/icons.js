@@ -1,0 +1,30 @@
+/** Lucide-compatible line style icon paths, no external assets. */
+const paths = {
+  layout: '<rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/>',
+  calendar: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/>',
+  layers: '<path d="m12 2 9 5-9 5-9-5 9-5ZM3 12l9 5 9-5M3 17l9 5 9-5"/>',
+  chart: '<path d="M3 3v18h18M7 16v-4M12 16V7M17 16V9"/>',
+  plus: '<path d="M12 5v14M5 12h14"/>',
+  chevronLeft: '<path d="m15 18-6-6 6-6"/>', chevronRight: '<path d="m9 18 6-6-6-6"/>',
+  chevronDown: '<path d="m6 9 6 6 6-6"/>',
+  check: '<path d="m5 12 4 4L19 6"/>',
+  circle: '<circle cx="12" cy="12" r="9"/>',
+  clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+  search: '<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
+  edit: '<path d="m16 5 3 3M4 20l5-.8L20 8a2 2 0 0 0-4-4L4.8 15.2 4 20Z"/>',
+  arrowUpRight: '<path d="M6 18 18 6M8 6h10v10"/>',
+  fileDown: '<path d="M12 3v12m-4-4 4 4 4-4M4 17v3h16v-3"/>',
+  upload: '<path d="M12 16V4m-4 4 4-4 4 4M4 17v3h16v-3"/>',
+  close: '<path d="M18 6 6 18M6 6l12 12"/>',
+  trash: '<path d="M3 6h18M8 6V4h8v2M5 6l1 15h12l1-15M10 10v7M14 10v7"/>',
+  spark: '<path d="m12 3 2.1 6.9L21 12l-6.9 2.1L12 21l-2.1-6.9L3 12l6.9-2.1L12 3Z"/>',
+  menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
+  settings: '<path d="M4 7h16M4 12h16M4 17h16M9 4v6M15 10v4M9 15v5"/>',
+  bolt: '<path d="M13 2 4 13h7l-1 9 10-12h-7l0-8Z"/>',
+  target: '<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
+  arrowRight: '<path d="M5 12h14m-6-6 6 6-6 6"/>',
+  info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>',
+  fileText: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M8 13h8M8 17h8"/>',
+  external: '<path d="M14 4h6v6m0-6-9 9M20 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h5"/>'
+};
+export function icon(name, size=18) { return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]||paths.circle}</svg>`; }
